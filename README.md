@@ -31,3 +31,21 @@ npx "path must be a string" ERROR - Fix https://github.com/zkat/npx/issues/144
 -> Instead of only deleting "C:\Program Files\nodejs" from system variables ("path" variable), I also added it to user variables ("path" variable), but after "%AppData%\npm".
 
 Instead of npx @angular/cli new lemon-mart --routing -> npx -p @angular/cli ng new orange-mart --routing
+
+A child module implements an @NgModule similar to app.module. The biggest difference is that a child module does not implement the bootstrap property, which is required for your root module, to initialize your Angular app
+
+$ npx ng g m manager -m app --routing
+READ: generate module of name "manager"
+option: -m means import the module into app.module 
+option: --routing means a routing module has been created and imported into ManagerModule 
+$ npx ng g c home -m app --inline-template --inline-style
+READ: generate component of name "home"
+option: -m means import the component into app.module
+option: --inline-template means no single .html file generated
+option: --inline-style means no singlr.css file generated
+$ npx ng g c manager/managerHome -m manager -s -t
+READ: generate component of name "manager" into manager/manager-home directory
+option: -m means import the component into manager.module
+option: -s shorthand for --inline-style
+option: -t shorthand for --inline-template
+

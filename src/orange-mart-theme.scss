@@ -1,0 +1,40 @@
+//https://material.angular.io/guide/theming
+
+@import "~@angular/material/theming"; // unlocks tools and sass functions
+//mixins are a block of code
+@include mat-core(
+
+); // gibe vase stylings for the angular material package. then use sass functionality to overwrite default angular theming
+
+$orange-mart-primary: mat-palette(
+  $mat-orange
+); //must be a color material design understands
+$orange-mart-accent: mat-palette($mat-green, A400);
+$orange-mart-warn: mat-palette($mat-red);
+
+$orange-mart-theme: mat-light-theme(
+  $orange-mart-primary,
+  $orange-mart-accent,
+  $orange-mart-warn
+);
+
+// by this line, overwrite default theme
+@include angular-material-theme($orange-mart-theme);
+//now, include in angular.json -> styles -> input ->
+
+/*
+"styles": [
+  {
+    //"input": "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+    "input": "src/orange-mart-theme.scss"
+  },
+  "src/styles.css"
+],
+"scripts": []
+*/
+
+
+
+
+
+
