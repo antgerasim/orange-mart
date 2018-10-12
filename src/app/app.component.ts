@@ -15,6 +15,6 @@ export class AppComponent {
     iconRegistry.addSvgIcon(
       'orange',
       sanitizer.bypassSecurityTrustResourceUrl('assets/img/icons/orange.svg')
-    )
+    );
   }
 }

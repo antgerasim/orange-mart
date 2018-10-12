@@ -49,3 +49,11 @@ option: -m means import the component into manager.module
 option: -s shorthand for --inline-style
 option: -t shorthand for --inline-template
 
+$ npx ng g c manager/manager -m manager --flat -s -t
+option: The --flat option skips directory creation and places the component directly under the manager folder, just like app.component residing directly under the app folder
+
+ERROR --> results in error Uncaught (in promise): TypeError: undefined is not a function
+Watch out not loading lazy-load modules into your app.module
+https://github.com/angular/angular/issues/23412
+
+Import FlexLayoutModule into app.module in order to have angular flex-layout working (icon gaps, container horizontaly allign, etc)
