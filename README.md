@@ -57,3 +57,6 @@ Watch out not loading lazy-load modules into your app.module
 https://github.com/angular/angular/issues/23412
 
 Import FlexLayoutModule into app.module in order to have angular flex-layout working (icon gaps, container horizontaly allign, etc)
+
+ERROR - Augury router tree indicates both components/paths eager and lazy-loaded components
+Fix: Ensure modules that arent denoted as lazy are not mistakenly being imported in app.module or some other component. 
