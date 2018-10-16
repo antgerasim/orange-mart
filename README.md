@@ -66,3 +66,34 @@ DESIGN:
 2. Generate favicon.ico --> https://realfavicongenerator.net/
 3. https://material.io/collections/color/#
 
+ROUTER FIRST IMPLEMENTATION:
+1. Define user roles early on
+2. Design with lazy loading in mind
+3. Implement a walking-skeleton navigation experience
+4. Design around major data components
+5. Enforce a decoupled component architecture
+6. Differentiate between user controls and component
+7. Maximize code reuse
+
+API DESIGN HIGH LEVEL GOALS
+1. Minimize data transmitted between client and server
+2. Stick to well-established design patterns (that is, pagination)
+3. Design to reduce business logic present in the client
+4. Flatten data structures
+5. Do not expose database keys or relationships
+6. Version endpoints from the get go
+7. Design around major data components
+
+ENTITY DESIGN -> draw.io
+1. Ask question "what kind of entities you would like to store"
+1.1. Example: - As the site contains a user profile section, a user should be stored (userRole valueObject?)
+              - As the site contains a point-of-sale (pos) section that emits receipts, a receipt should be stored
+              - As the site contains a inventory (purchase order??) section, an inventory (DDD - lineItem) should be stored
+              - As the site contains a inventory.products section, a product entity should be stored
+              - As the products are structured by categories, a category entity (value object?) should be stored
+
+API DESIGN -> swagger
+Swagger will allow you to design your web API. For teams, it can act as an interface between frontend and backend teams. API mocking allows development of features before implementation. VS Code Extension "Swagger Viewer".
+
+              
+
