@@ -26,7 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-DON COMMENTS:
+## DON COMMENTS:
 npx "path must be a string" ERROR - Fix https://github.com/zkat/npx/issues/144
 -> Instead of only deleting "C:\Program Files\nodejs" from system variables ("path" variable), I also added it to user variables ("path" variable), but after "%AppData%\npm".
 
@@ -60,3 +60,9 @@ Import FlexLayoutModule into app.module in order to have angular flex-layout wor
 
 ERROR - Augury router tree indicates both components/paths eager and lazy-loaded components
 Fix: Ensure modules that arent denoted as lazy are not mistakenly being imported in app.module or some other component. 
+
+DESIGN:
+1. Create Icon --> https://www.flaticon.com/
+2. Generate favicon.ico --> https://realfavicongenerator.net/
+3. https://material.io/collections/color/#
+
