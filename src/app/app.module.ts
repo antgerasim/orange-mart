@@ -35,4 +35,4 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 })
 export class AppModule {}
 
-// weiter mit 63 Common testting module%
+// weiter mit 63% summary -> check branding and design links
