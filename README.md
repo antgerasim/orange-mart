@@ -95,5 +95,7 @@ ENTITY DESIGN -> draw.io
 API DESIGN -> swagger
 Swagger will allow you to design your web API. For teams, it can act as an interface between frontend and backend teams. API mocking allows development of features before implementation. VS Code Extension "Swagger Viewer".
 
+Authentication and workflow
+A well-designed authentication workflow is stateless so that there's no concept of an expiring session. User's are free to interact with your stateless REST APIs from as many devices and tabs as they wish, simultaneously or overtime. JSON Web Token (JWT) implements distributed claims-based authentication that can be digitally signed or integration protected and/or encrypted using a Message Authentication Code (MAC). 
               
 
