@@ -13,7 +13,7 @@ import { MaterialModule } from "./material.module";
 import { HomeComponent } from "./home/home.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import {FlexLayoutModule} from '@angular/flex-layout';
-
+import {AuthService} from './auth/auth.service';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, PageNotFoundComponent],
@@ -30,7 +30,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     //UserModule,
 
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
