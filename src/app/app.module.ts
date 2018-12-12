@@ -1,6 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from "@angular/common/http";
 // User Modules
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -12,23 +12,32 @@ import { MaterialModule } from "./material.module";
 //import { UserModule } from "./user/user.module"; Error: Cannot find module 'app/user/user.module'
 import { HomeComponent } from "./home/home.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
-import {FlexLayoutModule} from '@angular/flex-layout';
-import {AuthService} from './auth/auth.service';
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { AuthService } from "./auth/auth.service";
+import { LoginComponent } from "./login/login.component";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, PageNotFoundComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    PageNotFoundComponent,
+    LoginComponent
+  ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+
     //ManagerModule,
     //InventoryModule,
     //PosModule,
     FlexLayoutModule
     //UserModule,
-
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

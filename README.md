@@ -98,6 +98,10 @@ Swagger will allow you to design your web API. For teams, it can act as an inter
 ## Authentication and workflow
 A well-designed authentication workflow is stateless so that there's no concept of an expiring session. User's are free to interact with your stateless REST APIs from as many devices and tabs as they wish, simultaneously or overtime. JSON Web Token (JWT) implements distributed claims-based authentication that can be digitally signed or integration protected and/or encrypted using a Message Authentication Code (MAC). This means once a user's identity is authenticated through, let's say a password-challenge, they receive an encoded claim ticket or a token, which can then be used to make future requests to the system without having to reauthenticate the identity of a user. The server can independently verify the validity of this claim and process the requests without requiring any prior knowledge of having interacted with this user. Thus, we don't have to store session information regarding a user, making our solution stateless and easy to scale. Each token will expire after a predefined period and due to their distributed nature, they can't be remotely or individually revoked; however, we can bolster real-time security by interjecting custom account and user role status checks to ensure that the authenticated user is authorized to access server-side resources.
 
+## Add auth service
+1. Add an authentication and authorization service:
+$ npx ng g s auth -m app --flat false
+
 ## Implement a basic authentication service
 1. Start by installing a JWT decoding library, and for faking authentication, a JWT encoding library:
 $ npm install jwt-decode fake-jwt-sign
