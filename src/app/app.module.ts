@@ -16,13 +16,16 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { AuthService } from "./auth/auth.service";
 import { LoginComponent } from "./login/login.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { SimpleDialogComponent } from './common/simple-dialog.component';
+import { UiService } from "./common/ui.service";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     PageNotFoundComponent,
-    LoginComponent
+    LoginComponent,
+    SimpleDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     FlexLayoutModule
     //UserModule,
   ],
-  providers: [AuthService],
+  providers: [AuthService, UiService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

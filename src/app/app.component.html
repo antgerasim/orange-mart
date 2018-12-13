@@ -1,24 +1,10 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<mat-toolbar fxLayoutGap="8px" color="primary"> <!-- fxLayoutGap="8px" dont work -->
-  <mat-icon>menu</mat-icon>
-  <a mat-icon-button routerLink="/home"><mat-icon svgIcon="orange"></mat-icon><span class="mat-h2">OrangeMart</span></a>
-<!--   <button mat-icon-button>
-    <mat-icon>menu</mat-icon>
-  </button>
-  <mat-icon svgIcon="orange"></mat-icon>
-  <a mat-button routerLink="/home">
-    <h1>OrangeMart</h1>
-  </a> -->
-
-  <span class="flex-spacer"></span>
-  <!--     <button mat-icon-button><mat-icon>account_circle</mat-icon></button> -->
-  <button mat-mini-fab routerLink="/user/profile" matTooltip="Profile" aria-label="User Profile"> <!-- mat-mini-fab instead of mat-icon-button in order for tooltips to work -->
-    <mat-icon>account_circle</mat-icon>
-  </button>
-<!--   <button mat-icon-button><mat-icon>lock_open</mat-icon></button> -->
-<button mat-mini-fab routerLink="/user/logout" matTooltip="Logout" aria-label="Logout">
-  <mat-icon>lock_open</mat-icon>
-</button>
-</mat-toolbar>
-
-<router-outlet></router-outlet>
+<div class="app-container">
+    <mat-toolbar color="primary" fxLayoutGap="8px">
+        <button mat-icon-button><mat-icon>menu</mat-icon></button>
+        <a mat-icon-button routerLink="/home"><mat-icon svgIcon="lemon"></mat-icon><span class="mat-h2">LemonMart</span></a>
+        <span class="flex-spacer"></span>
+        <button mat-mini-fab routerLink="/user/profile" matTooltip="Profile" aria-label="User Profile"><mat-icon>account_circle</mat-icon></button>
+        <button mat-mini-fab routerLink="/user/logout" matTooltip="Logout" aria-label="Logout"><mat-icon>lock_open</mat-icon></button>
+      </mat-toolbar>
+      <router-outlet></router-outlet>
+  </div>
