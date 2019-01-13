@@ -47,4 +47,5 @@ import { UiService } from "./common/ui.service";
 })
 export class AppModule {}
 
-// weiter mit 63% summary -> check branding and design links
+
+//weiter mit HTTP Interceptor 75%
